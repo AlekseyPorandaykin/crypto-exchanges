@@ -1,0 +1,29 @@
+{
+  "code": "200000",
+  "data": [
+    {
+      "id": "658d0e97c62c010007a13758",
+      "currency": "SOL",
+      "type": "trade",
+      "balance": "0.0474",
+      "available": "0.0474",
+      "holds": "0"
+    },
+    {
+      "id": "658d0d3ba480f40007f9eb54",
+      "currency": "USDT",
+      "type": "main",
+      "balance": "4.64931404",
+      "available": "4.64931404",
+      "holds": "0"
+    },
+    {
+      "id": "658d0e173ca06f000752f00a",
+      "currency": "USDT",
+      "type": "trade",
+      "balance": "0.00801159",
+      "available": "0.00801159",
+      "holds": "0"
+    }
+  ]
+}

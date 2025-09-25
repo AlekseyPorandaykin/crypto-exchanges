@@ -1,0 +1,39 @@
+{
+  "retCode": 0,
+  "retMsg": "success",
+  "result": {
+    "rows": [
+      {
+        "coin": "USDT",
+        "chain": "internalAddressChain",
+        "amount": "990",
+        "txID": "e3ef0249-e010-43cb-a512-22f0d1df",
+        "status": "success",
+        "toAddress": "50055520",
+        "tag": "",
+        "withdrawFee": "0",
+        "createTime": "1705267586000",
+        "updateTime": "1705267601000",
+        "withdrawId": "33579066",
+        "withdrawType": 1
+      },
+      {
+        "coin": "USDT",
+        "chain": "internalAddressChain",
+        "amount": "10",
+        "txID": "5dde8d99-699f-4876-b4b2-84471c79",
+        "status": "success",
+        "toAddress": "50055520",
+        "tag": "",
+        "withdrawFee": "0",
+        "createTime": "1705267475000",
+        "updateTime": "1705267491000",
+        "withdrawId": "33578941",
+        "withdrawType": 1
+      }
+    ],
+    "nextPageCursor": "eyJtaW5JRCI6MzM1Nzg5NDEsIm1heElEIjozMzU3OTA2Nn0="
+  },
+  "retExtInfo": {},
+  "time": 1707297249286
+}
