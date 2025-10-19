@@ -2,6 +2,7 @@ package v5
 
 import (
 	"context"
+
 	"github.com/AlekseyPorandaykin/crypto-exchanges/exchange/bybit/v5/response"
 )
 

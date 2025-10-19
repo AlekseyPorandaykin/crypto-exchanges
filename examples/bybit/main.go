@@ -23,6 +23,6 @@ func main() {
 		return
 	}
 	fmt.Println(c.SymbolInfo(context.TODO()))
-	fmt.Println(c.Prices(context.TODO()))
+	//fmt.Println(c.Prices(context.TODO()))
 	fmt.Println(c.LastMonthCandlesticks(context.TODO(), "BTCUSDT"))
 }

@@ -17,7 +17,7 @@ type BybitV5Config struct {
 
 func (b BybitV5Config) Validate() error {
 	if b.BaseUrl == "" {
-		return errors.New("bybit base url is required")
+		return errors.New("base url is required")
 	}
 	return nil
 }
