@@ -23,5 +23,5 @@ func (b BybitV5Config) Validate() error {
 }
 
 func (b BybitV5Config) Name() string {
-	return v5.ExchangeName
+	return v5.exchangeName
 }

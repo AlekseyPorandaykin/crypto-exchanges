@@ -11,7 +11,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-const ExchangeName = "bybit"
+const exchangeName = "bybit"
 
 type Adapter struct {
 	client *Client
@@ -19,6 +19,10 @@ type Adapter struct {
 
 func NewAdapter(c *Client) client.ExchangeClient {
 	return &Adapter{c}
+}
+
+func (a *Adapter) ExchangeName() string {
+	return exchangeName
 }
 
 func (a *Adapter) LastMinuteCandlesticks(ctx context.Context, symbol string, minutes int) ([]client.Candlestick, error) {
@@ -90,7 +94,7 @@ func (a *Adapter) Prices(ctx context.Context) ([]client.Price, error) {
 	for _, data := range tickerResp.Result.List {
 		result = append(result, client.Price{
 			Symbol:    data.Symbol,
-			Exchange:  ExchangeName,
+			Exchange:  exchangeName,
 			Value:     data.LastPrice,
 			CreatedAt: currentTime,
 		})
@@ -134,7 +138,7 @@ func (a *Adapter) spotSymbolInfo(ctx context.Context) ([]client.SymbolInfo, erro
 	for _, item := range instrumentInfo.Result.List {
 		result = append(result, client.SymbolInfo{
 			Symbol:     item.Symbol,
-			Exchange:   ExchangeName,
+			Exchange:   exchangeName,
 			BaseAsset:  item.BaseCoin,
 			QuoteAsset: item.QuoteCoin,
 			Category:   client.SymbolCategorySpot,
@@ -179,7 +183,7 @@ func (a *Adapter) linearSymbolInfo(ctx context.Context) ([]client.SymbolInfo, er
 	for _, item := range instrumentInfo.Result.List {
 		result = append(result, client.SymbolInfo{
 			Symbol:     item.Symbol,
-			Exchange:   ExchangeName,
+			Exchange:   exchangeName,
 			BaseAsset:  item.BaseCoin,
 			QuoteAsset: item.QuoteCoin,
 			Category:   client.SymbolCategoryFuture,
@@ -202,7 +206,7 @@ func (a *Adapter) inverseSymbolInfo(ctx context.Context) ([]client.SymbolInfo, e
 	for _, item := range instrumentInfo.Result.List {
 		result = append(result, client.SymbolInfo{
 			Symbol:     item.Symbol,
-			Exchange:   ExchangeName,
+			Exchange:   exchangeName,
 			BaseAsset:  item.BaseCoin,
 			QuoteAsset: item.QuoteCoin,
 			Category:   client.SymbolCategoryOther,
@@ -225,7 +229,7 @@ func (a *Adapter) optionSymbolInfo(ctx context.Context) ([]client.SymbolInfo, er
 	for _, item := range instrumentInfo.Result.List {
 		result = append(result, client.SymbolInfo{
 			Symbol:     item.Symbol,
-			Exchange:   ExchangeName,
+			Exchange:   exchangeName,
 			BaseAsset:  item.BaseCoin,
 			QuoteAsset: item.QuoteCoin,
 			Category:   client.SymbolCategoryOther,

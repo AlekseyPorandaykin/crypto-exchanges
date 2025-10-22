@@ -16,4 +16,5 @@ type ExchangeClient interface {
 	CandlestickFetcher
 	Prices(ctx context.Context) ([]Price, error)
 	SymbolInfo(ctx context.Context) ([]SymbolInfo, error)
+	ExchangeName() string
 }
